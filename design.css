@@ -1,0 +1,547 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #0f1923;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*----------------------------------- Intro Section -----------------------------------*/
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.intro-overlay {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.intro-overlay h1 {
+    font-size: 4rem;
+    margin-bottom: .5rem;
+}
+
+.intro-overlay p {
+    font-size: 1rem;
+    margin-bottom: 6rem;
+}
+
+.intro-overlay button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    background-color: #14ebfa;
+    color: #fefefe;
+    border: none;
+    cursor: crosshair;
+    transition: background 0.7s;
+}
+
+.intro-overlay button:hover {
+    background-color: #e56a6a;
+}
+
+
+/* Header Styles */
+header {
+    background-color: #cc2323;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+.nav-item:not(:last-child) .nav-link {
+    border-right: 2px solid #170808;
+}
+
+.nav-link:hover {
+    background-color: #21bc93;
+}
+
+/*----------------------------------- Game Overview Section Styles -----------------------------------*/
+#game-overview {
+    background: linear-gradient(to bottom, #0f1923, rgba(0, 0, 0, 0.6));
+    padding: 4rem 2rem;
+    color: #ffffff;
+    position: relative;
+}
+
+#game-overview h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ff0015; 
+}
+
+.overview-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.overview-content > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    color: #e6e6e6;
+}
+
+.game-features, .game-summary {
+    background: rgba(255, 70, 85, 0.2); 
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.game-features h3, .game-summary h3 {
+    color: #ff4655;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.game-features ul, .game-summary ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.game-features li, .game-summary li {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    color: #dad7d7;
+}
+
+.game-features li::before, .game-summary li::before {
+    content: '›';
+    color: #ff4655;
+    margin-right: 1rem;
+}
+/* Gameplay Elements */
+.gameplay-elements {
+    margin-top: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem; 
+    border-radius: 1rem; 
+}
+
+.gameplay-elements h4 {
+    color: #ff4655;
+    font-size: 1.2rem; 
+    margin-bottom: 1rem; 
+}
+
+/* Hover Effects */
+.game-features:hover, .game-summary:hover {
+    transform: translateY(-5px) ; 
+    transition: transform .3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 12px rgba(0, 239, 239, 0.2);
+}
+
+
+/*---------  VIDEO  ----------*/
+#hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.hero-image {
+    flex-basis: 50%;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*----------------------------------- Agent Section -----------------------------------*/
+#agents {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#agents h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fa0000;
+}
+#agents h3 { /*Role */
+    font-size: 1.5rem;
+    color: #ff4655;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+#agents p { /* Role's description */
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.agent-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.agent-card {
+    background-color: #2a3749;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 12px rgba(6, 212, 243, 0.1);
+    transition: transform .3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.agent-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(233, 18, 18, 0.2);
+}
+
+.agent-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.agent-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.agent-card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+/*----------------------------------- Maps Section -----------------------------------*/
+#maps {
+    padding: 4rem 2rem;
+}
+
+#maps h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fa0000;
+}
+
+.map-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.map-card {
+    background-color: #2a3749;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 12px rgba(6, 212, 243, 0.1);
+    transition: transform .3s ease, box-shadow 0.3s ease;
+}
+/* Hover Effect */
+.map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(233, 18, 18, 0.2);
+}
+
+.map-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.map-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*----------------------------------- Weapons Section -----------------------------------*/
+#weapons {
+    padding: 4rem 2rem;
+}
+
+#weapons h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fa0000;
+}
+
+#weapons h3 {
+    font-size: 2rem;
+    color: #ff4655;
+    text-align: center;
+    margin: 1rem;
+}
+
+.weapon-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.weapon-card {
+    background-color: #2a3749;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 12px rgba(6, 212, 243, 0.1);
+    transition: transform .3s ease, box-shadow 0.3s ease;
+}
+/* Hover Effect */
+.weapon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(233, 18, 18, 0.2);
+}
+
+.weapon-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.weapon-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.weapon-card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+
+.weapon-stats {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #e6e6e6;
+    gap: 0.3rem;
+    font-weight: bold;
+}
+/*----------------------------------- Strategy Section -----------------------------------*/
+#strategy {
+    padding: 4rem 2rem;
+}
+
+#strategy h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fa0000;
+}
+
+.strategy-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.strategy-card {
+    background-color: #2a3749;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 12px rgba(6, 212, 243, 0.1);
+    transition: transform .3s ease, box-shadow 0.3s ease;
+}
+
+.strategy-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.strategy-card p {
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+/* Hover Effect */
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(233, 18, 18, 0.2);
+}
+
+/*----------------------------------- Footer Section -----------------------------------*/
+.site-footer {
+    background-color: #1f2937;
+    color: #ccc;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-content img {
+    height: 40px;
+    margin: 0 1rem;
+}
+
+.footer-content a {
+    font-size: 0.8rem;
+    color: #fa0000;
+    margin-top: 0rem;
+}
+
+/*----------------------------------- Agent Page Styles -----------------------------------*/
+.agent-page {
+    padding: 2rem;
+}
+
+.navigation {
+    padding: 1rem 0;
+}
+
+.back-button {
+    color: #ffffff;
+    background-color: #ff4655;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e52b3e;
+}
+
+.agent-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #2a3749;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 12px rgba(6, 212, 243, 0.1);
+}
+
+.agent-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.agent-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+}
+
+.agent-info h1 {
+    font-size: 2.5rem;
+    color: #ff4655;
+    margin-bottom: 0.5rem;
+}
+
+.agent-role {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+.agent-content h2 {
+    color: #ff4655;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ability h3 {
+    color: #e6e6e6;
+    margin-top: 1rem;
+}
+
+.agent-video iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+

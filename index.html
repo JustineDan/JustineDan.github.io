@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDTERM PROJECT_MORALDE</title>
+    <link rel="stylesheet" href="design.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+                <!-- Intro Section -->
+                <div id="intro">
+                    <video autoplay muted loop id="intro-video">
+                        <source src="pictures/Valorant Intro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="intro-overlay">
+                        <h1>Valorant Tactical Guide</h1>
+                        <p>MORALDE, JUSTINE DANIEL L. | CEIT - 37 - 301A</p>
+                        <button onclick="startGuide()">Click to Start</button>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div id="main-content" style="display: none;">
+                    <header>
+                        <nav>
+                            <ul class="nav-list">
+                                <li class="nav-item"><a class="nav-link" href="#game-overview">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#agents">Agents</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#maps">Maps</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#weapons">Weapons</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#strategy">Strategy</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+
+                    <main>
+                        <section id="hero">
+                            <video autoplay muted loop id="hero-video">
+                                <source src="pictures/valo_bg.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="hero-content">
+                                <h1>Valorant Tactical Guide</h1>
+                                <p>Explore the world of Valorant and master the art of tactical gameplay.</p>
+                            </div>
+                        </section>
+
+                <!----------------------------- HOME/GAMEOVERVIEW ------------------------------->
+                <section id="game-overview">
+                    <h2>What is Valorant?</h2>
+                    <div class="overview-content">
+                        <p>Valorant is a free-to-play 5v5 tactical first-person shooter developed by Riot Games. Set in a near-future Earth, the game features a diverse cast of agents, each with unique abilities and roles, competing in objective-based matches.</p>
+                        
+                        <div class="game-features">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Precise gunplay combined with unique character abilities</li>
+                                <li>128-tick servers for responsive and accurate gameplay</li>
+                                <li>Advanced anti-cheat system for competitive integrity</li>
+                                <li>Regular updates with new agents, maps, and content</li>
+                            </ul>
+                        </div>
+
+                        <div class="game-summary">
+                            <h3>Game Summary</h3>
+                            <p>In each match, one team attacks while the other defends. Attackers must plant a bomb (called the Spike) at specific sites, while defenders prevent the plant or defuse the Spike if planted. Teams switch sides halfway through, and the first team to win 13 rounds claims victory.</p>
+                            
+                            <div class="gameplay-elements">
+                                <h4>Core Gameplay Elements:</h4>
+                                <ul>
+                                    <li>Economy Management: Players must manage credits to buy weapons and abilities each round</li>
+                                    <li>Team Composition: Select agents with complementary abilities to create effective strategies</li>
+                                    <li>Map Control: Utilize abilities and coordination to control key areas of the map</li>
+                                    <li>Strategic Decision-Making: Make split-second decisions about rotations, ability usage, and engagements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!----------------------------- AGENTS ------------------------------->
+                <section id="agents">
+                    <h2>Valorant Agents</h2>
+                
+                    <!-- Duelists -->
+                    <div class="role-division">
+                        <h3>Duelists</h3>
+                        <p>Duelists are self-sufficient fraggers who are expected to seek out engagements and bring down enemies. They have abilities that allow them to enter combat quickly and take control of engagements.</p>
+                        
+                        <div class="agent-cards" usemap="#valoagents">
+                            <a href="https://youtu.be/-cPLXswVsvc?si=dumfDUW995HLLhDt" target="_blank" class="agent-card">
+                                <img src="pictures/agents/jett.png" alt="Jett" usemap="#valoagents">
+                                <h3>Jett</h3>
+                                <p>Agile duelist with mobility-focused abilities and precise gunplay.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=ttJMFW2wUQM" target="_blank" class="agent-card">
+                                <img src="pictures/agents/phoenix.png" alt="Phoenix" usemap="#valoagents">
+                                <h3>Phoenix</h3>
+                                <p>Self-sustaining duelist with fire-based abilities and healing.</p>
+                            </a>
+                            <a href="https://youtu.be/2-uAL__pp_U?si=fIzyb_wINSz5YWqQ" target="_blank" class="agent-card">
+                                <img src="pictures/agents/raze.png" alt="Raze" usemap="#valoagents">
+                                <h3>Raze</h3>
+                                <p>Explosive specialist with high damage potential and mobility.</p>
+                            </a>
+                            <a href="https://youtu.be/IzsQNYrq9AM?si=LvXZ4nrKX16KI4bM" target="_blank" class="agent-card">
+                                <img src="pictures/agents/reyna.png" alt="Reyna" usemap="#valoagents">
+                                <h3>Reyna</h3>
+                                <p>Vampire-like duelist who thrives on getting kills to heal and dismiss.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=GdOEQv-zQVw" target="_blank" class="agent-card">
+                                <img src="pictures/agents/yoru.png" alt="Yoru" usemap="#valoagents">
+                                <h3>Yoru</h3>
+                                <p>Deceptive duelist with teleportation and dimensional abilities.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=dtx8CgjRmqE" target="_blank" class="agent-card">
+                                <img src="pictures/agents/neon.png" alt="Neon" usemap="#valoagents">
+                                <h3>Neon</h3>
+                                <p>High-speed duelist with electricity-based abilities and fast plays.</p>
+                            </a>
+                            <a href="https://youtu.be/jaUJO3uAu5s?si=xq7e7LxJwMAYh7UT" target="_blank" class="agent-card">
+                                <img src="pictures/agents/iso.png" alt="Iso" usemap="#valoagents">
+                                <h3>Iso</h3>
+                                <p>Duelist with powerful defensive and offensive capabilities.</p>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Initiators -->
+                    <div class="role-division">
+                        <h3>Initiators</h3>
+                        <p>Initiators challenge angles by setting up their team to enter contested ground and push defenders away. They excel at revealing and displacing enemies to create entry points.</p>
+                        <div class="agent-cards">
+                            <a href="https://www.youtube.com/watch?v=OZ76UP-c8Ao" target="_blank" class="agent-card">
+                                <img src="pictures/agents/sova.png" alt="Sova" usemap="#valoagents">
+                                <h3>Sova</h3>
+                                <p>Recon specialist with tracking arrows and drone surveillance.</p>
+                            </a>
+                            <a href="https://youtu.be/Rux0HjzKQbw?si=r9SpdIlhM3MWJHMM" target="_blank" class="agent-card">
+                                <img src="pictures/agents/breach.png" alt="Breach" usemap="#valoagents">
+                                <h3>Breach</h3>
+                                <p>Initiator who excels at clearing angles with seismic abilities.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=C3QTyMXi-WE" target="_blank" class="agent-card">
+                                <img src="pictures/agents/skye.png" alt="Skye" usemap="#valoagents">
+                                <h3>Skye</h3>
+                                <p>Support initiator with healing and information-gathering abilities.</p>
+                            </a>
+                            <a href="https://youtu.be/eU1l7eBy2_Y?si=Kh8ozcY8cf3R-XWC" target="_blank" class="agent-card">
+                                <img src="pictures/agents/kayo.png" alt="KAY/O" usemap="#valoagents">
+                                <h3>KAY/O</h3>
+                                <p>Robot initiator who can suppress enemy abilities and flash sites.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=UMzKD73cs3c" target="_blank" class="agent-card">
+                                <img src="pictures/agents/fade.png" alt="Fade" usemap="#valoagents">
+                                <h3>Fade</h3>
+                                <p>Nightmare initiator who reveals and tracks enemies with fear.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=iYFh_XAXSPk" target="_blank" class="agent-card">
+                                <img src="pictures/agents/gekko.png" alt="Gekko" usemap="#valoagents">
+                                <h3>Gekko</h3>
+                                <p>Initiator with creature-based abilities for reconnaissance and control.</p>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Controllers -->
+                    <div class="role-division">
+                        <h3>Controllers</h3>
+                        <p>Controllers are experts in slicing up dangerous territory to set their team up for success. They use vision-blocking abilities to restrict enemies' sight and create safe passage for allies.</p>
+                        <div class="agent-cards">
+                            <a href="https://www.youtube.com/watch?v=_jJdWy6bDj4" target="_blank" class="agent-card">
+                                <img src="pictures/agents/omen.png" alt="Omen" usemap="#valoagents">
+                                <h3>Omen</h3>
+                                <p>Shadowy controller with teleportation and smoke abilities.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=9dOSy0EhLfQ" target="_blank" class="agent-card">
+                                <img src="pictures/agents/viper.png" alt="Viper" usemap="#valoagents">
+                                <h3>Viper</h3>
+                                <p>Chemical controller with toxic screen and poison abilities.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=-ylVnuPWlJM" target="_blank" class="agent-card">
+                                <img src="pictures/agents/astra.png" alt="Astra" usemap="#valoagents">
+                                <h3>Astra</h3>
+                                <p>Cosmic controller who places stars for various effects.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=7yHnJ_oNxTI" target="_blank" class="agent-card">
+                                <img src="pictures/agents/brimstone.png" alt="Brimstone" usemap="#valoagents">
+                                <h3>Brimstone</h3>
+                                <p>Tactical commander with orbital smokes and support abilities.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=Z7aMCp9RCbk" target="_blank" class="agent-card">
+                                <img src="pictures/agents/harbor.png" alt="Harbor" usemap="#valoagents">
+                                <h3>Harbor</h3>
+                                <p>Water-based controller who creates walls and spheres of water.</p>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <!-- Sentinels -->
+                    <div class="role-division">
+                        <h3>Sentinels</h3>
+                        <p>Sentinels are defensive experts who can lock down areas and protect teammates. Their abilities focus on healing, surveillance, and blocking enemy advances.</p>
+                        <div class="agent-cards">
+                            <a href="https://www.youtube.com/watch?v=1aRwM_QsqQI" target="_blank" class="agent-card">
+                                <img src="pictures/agents/sage.png" alt="Sage" usemap="#valoagents">
+                                <h3>Sage</h3>
+                                <p>Healing sentinel who can revive allies and create barriers.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=SgbqFtRRgLA" target="_blank" class="agent-card">
+                                <img src="pictures/agents/cypher.png" alt="Cypher" usemap="#valoagents">
+                                <h3>Cypher</h3>
+                                <p>Surveillance sentinel with traps and camera abilities.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=ua-iIRQDY8g" target="_blank" class="agent-card">
+                                <img src="pictures/agents/killjoy.png" alt="Killjoy" usemap="#valoagents">
+                                <h3>Killjoy</h3>
+                                <p>Tech sentinel with turrets and area denial abilities.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=FUoqAn5T4h4" target="_blank" class="agent-card">
+                                <img src="pictures/agents/chamber.png" alt="Chamber" usemap="#valoagents">
+                                <h3>Chamber</h3>
+                                <p>Weapon specialist sentinel with custom firearms and teleports.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=UK7Tdob8HQw" target="_blank" class="agent-card">
+                                <img src="pictures/agents/deadlock.png" alt="Deadlock" usemap="#valoagents">
+                                <h3>Deadlock</h3>
+                                <p>Barrier sentinel who creates nanowire walls and traps.</p>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=BEpcN-eE8ms" target="_blank" class="agent-card">
+                                <img src="pictures/agents/vyse.png" alt="Vyse" usemap="#valoagents">
+                                <h3>Vyse</h3>
+                                <p>Strategic sentinel who deploys crystalline barriers and lethal wire nets.</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <map name="valoagents">
+                    <!-- Duelists -->
+                    <area shape="rect" coords="0,0,150,150" href="https://youtu.be/-cPLXswVsvc?si=dumfDUW995HLLhDt" alt="Jett">
+                    <area shape="rect" coords="160,0,310,150" href="https://www.youtube.com/watch?v=ttJMFW2wUQM" alt="Phoenix">
+                    <area shape="rect" coords="320,0,470,150" href="https://youtu.be/2-uAL__pp_U?si=fIzyb_wINSz5YWqQ" alt="Raze">
+                    <area shape="rect" coords="480,0,630,150" href="https://youtu.be/IzsQNYrq9AM?si=LvXZ4nrKX16KI4bM" alt="Reyna">
+                    <area shape="rect" coords="0,160,150,310" href="https://www.youtube.com/watch?v=GdOEQv-zQVw" alt="Yoru">
+                    <area shape="rect" coords="160,160,310,310" href="https://www.youtube.com/watch?v=dtx8CgjRmqE" alt="Neon">
+                    <area shape="rect" coords="320,160,470,310" href="https://youtu.be/jaUJO3uAu5s?si=xq7e7LxJwMAYh7UT" alt="Iso">
+                
+                    <!-- Initiators -->
+                    <area shape="rect" coords="0,320,150,470" href="https://www.youtube.com/watch?v=OZ76UP-c8Ao" alt="Sova">
+                    <area shape="rect" coords="160,320,310,470" href="https://youtu.be/Rux0HjzKQbw?si=r9SpdIlhM3MWJHMM" alt="Breach">
+                    <area shape="rect" coords="320,320,470,470" href="https://www.youtube.com/watch?v=C3QTyMXi-WE" alt="Skye">
+                    <area shape="rect" coords="480,320,630,470" href="https://youtu.be/eU1l7eBy2_Y?si=Kh8ozcY8cf3R-XWC" alt="KAY/O">
+                    <area shape="rect" coords="0,480,150,630" href="https://www.youtube.com/watch?v=UMzKD73cs3c" alt="Fade">
+                    <area shape="rect" coords="160,480,310,630" href="https://www.youtube.com/watch?v=iYFh_XAXSPk" alt="Gekko">
+                
+                    <!-- Controllers -->
+                    <area shape="rect" coords="0,640,150,790" href="https://www.youtube.com/watch?v=_jJdWy6bDj4" alt="Omen">
+                    <area shape="rect" coords="160,640,310,790" href="https://www.youtube.com/watch?v=9dOSy0EhLfQ" alt="Viper">
+                    <area shape="rect" coords="320,640,470,790" href="https://www.youtube.com/watch?v=-ylVnuPWlJM" alt="Astra">
+                    <area shape="rect" coords="480,640,630,790" href="https://www.youtube.com/watch?v=7yHnJ_oNxTI" alt="Brimstone">
+                    <area shape="rect" coords="0,800,150,950" href="https://www.youtube.com/watch?v=Z7aMCp9RCbk" alt="Harbor">
+                
+                    <!-- Sentinels -->
+                    <area shape="rect" coords="0,960,150,1110" href="https://www.youtube.com/watch?v=1aRwM_QsqQI" alt="Sage">
+                    <area shape="rect" coords="160,960,310,1110" href="https://www.youtube.com/watch?v=SgbqFtRRgLA" alt="Cypher">
+                    <area shape="rect" coords="320,960,470,1110" href="https://www.youtube.com/watch?v=ua-iIRQDY8g" alt="Killjoy">
+                    <area shape="rect" coords="480,960,630,1110" href="https://www.youtube.com/watch?v=FUoqAn5T4h4" alt="Chamber">
+                    <area shape="rect" coords="0,1120,150,1270" href="https://www.youtube.com/watch?v=UK7Tdob8HQw" alt="Deadlock">
+                    <area shape="rect" coords="160,1120,310,1270" href="https://www.youtube.com/watch?v=BEpcN-eE8ms" alt="Vyse">
+                </map>
+
+            <!----------------------------- MAPS------------------------------------------>
+                <section id="maps">
+                    <h2>Valorant Maps</h2>
+                    <div class="map-cards" usemap="#valomaps">
+                        <div class="map-card">
+                            <img src="pictures/MapResources/bind.jpg" alt="Bind" usemap="#valomaps">
+                            <h3>Bind</h3>
+                            <p>A map with unique one-way teleporters connecting both sites.</p>
+                            <p>*No video available*</p>
+                        </div>
+                        <a href="https://youtu.be/lFx0-bFCdLw?si=YvJbVFGSjw93otX-" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/haven.jpg" alt="Haven" usemap="#valomaps">
+                            <h3>Haven</h3>
+                            <p>Unique three-site map with multiple pathways and control points.</p>
+                        </a>
+                        <a href="https://youtu.be/igN_PjBBh9g?si=57RM1a7HawFQ7Cd8" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/split.jpg" alt="Split" usemap="#valomaps">
+                            <h3>Split</h3>
+                            <p>Vertical-focused map with rope ascenders and elevated positions.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=IhhjcB2ZjIM" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/ascent.jpg" alt="Ascent" usemap="#valomaps">
+                            <h3>Ascent</h3>
+                            <p>Open middle area with mechanical doors protecting spike sites.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=EB4vFzY3MWc" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/icebox.jpg" alt="Icebox" usemap="#valomaps">
+                            <h3>Icebox</h3>
+                            <p>Arctic facility with vertical zip lines and multiple elevation points.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=HuI3qdaL-jI" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/breeze.jpg" alt="Breeze" usemap="#valomaps">
+                            <h3>Breeze</h3>
+                            <p>Large, open map with long sightlines and unique door mechanics.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=2CR4Wy8dKrY" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/fracture.jpg" alt="Fracture" usemap="#valomaps">
+                            <h3>Fracture</h3>
+                            <p>H-shaped map with attackers spawning on both sides.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=Sb22sSA7oTE" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/pearl.jpg" alt="Pearl" usemap="#valomaps">
+                            <h3>Pearl</h3>
+                            <p>Underwater city with traditional three-lane layout and tight corners.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=QbQk_7sFec4" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/lotus.jpg" alt="Lotus" usemap="#valomaps">
+                            <h3>Lotus</h3>
+                            <p>Three-site map with rotating doors and destructible walls.</p>
+                        </a>
+                        <a href="https://youtu.be/kmfok5MtWkI" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/sunset.jpg" alt="Sunset" usemap="#valomaps">
+                            <h3>Sunset</h3>
+                            <p>LA-based map with multiple pathways and strategic positions.</p>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=OtuyLWn5gCI" target="_blank" class="map-card">
+                            <img src="pictures/MapResources/abyss.jpg" alt="Abyss" usemap="#valomaps">
+                            <h3>Abyss</h3>
+                            <p>Descend into darkness on this intense, underground map with treacherous tunnels and hidden ambushes.</p>
+                        </a>
+                    </div>
+                </section>
+                <map name="valomaps"></map>
+                <area shape="rect" coords="0,0,150,150" href="https://youtu.be/lFx0-bFCdLw?si=YvJbVFGSjw93otX-" alt="Haven">
+                <area shape="rect" coords="160,0,310,150" href="https://youtu.be/igN_PjBBh9g?si=57RM1a7HawFQ7Cd8" alt="Split">
+                <area shape="rect" coords="320,0,470,150" href="https://www.youtube.com/watch?v=IhhjcB2ZjIM" alt="Ascent">
+                <area shape="rect" coords="480,0,630,150" href="https://www.youtube.com/watch?v=EB4vFzY3MWc" alt="Icebox">
+                <area shape="rect" coords="0,160,150,310" href="https://www.youtube.com/watch?v=HuI3qdaL-jI" alt="Breeze">
+                <area shape="rect" coords="160,160,310,310" href="https://www.youtube.com/watch?v=2CR4Wy8dKrY" alt="Fracture">
+                <area shape="rect" coords="320,160,470,310" href="https://www.youtube.com/watch?v=Sb22sSA7oTE" alt="Pearl">
+                <area shape="rect" coords="480,160,630,310" href="https://www.youtube.com/watch?v=QbQk_7sFec4" alt="Lotus">
+                <area shape="rect" coords="0,320,150,470" href="https://youtu.be/kmfok5MtWkI" alt="Sunset">
+                <area shape="rect" coords="160,320,310,470" href="https://www.youtube.com/watch?v=OtuyLWn5gCI" alt="Abyss">
+            </map>
+               
+                <!----------------------------- WEAPONS ------------------------------->
+            <section id="weapons">
+                <h2>Valorant Weapons</h2>
+                
+                <!-- Sidearms Category -->
+                <div class="weapon-category">
+                    <h3>Sidearms</h3>
+                    <div class="weapon-cards">
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/classic.png" alt="Classic">
+                            <h3>Classic</h3>
+                            <p>Free pistol with primary and alternate fire modes.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: Free</span>
+                                <span>Damage: 26 on body -78 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/shorty.png" alt="Shorty">
+                            <h3>Shorty</h3>
+                            <p>Short-range sidearm shotgun, deadly at close quarters.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 150</span>
+                                <span>Damage: 12/pellet</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/frenzy.png" alt="Frenzy">
+                            <h3>Frenzy</h3>
+                            <p>Automatic pistol with high fire rate.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 450</span>
+                                <span>Damage: 26 on body -78 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/ghost.png" alt="Ghost">
+                            <h3>Ghost</h3>
+                            <p>Accurate silenced pistol with good armor penetration.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 500</span>
+                                <span>Damage: 30 on body -105 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/sheriff.png" alt="Sheriff">
+                            <h3>Sheriff</h3>
+                            <p>High-powered revolver with one-shot potential.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 800</span>
+                                <span>Damage: 55 on body -159 on head</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SMGs Category -->
+                <div class="weapon-category">
+                    <h3>SMGs</h3>
+                    <div class="weapon-cards">
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/stinger.png" alt="Stinger">
+                            <h3>Stinger</h3>
+                            <p>SMG with burst-fire alternative mode.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 950</span>
+                                <span>Damage: 27 on body -67 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/spectre.png" alt="Spectre">
+                            <h3>Spectre</h3>
+                            <p>Silenced SMG with excellent accuracy while moving.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 1600</span>
+                                <span>Damage: 26 on body -78 on head</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shotguns Category -->
+                <div class="weapon-category">
+                    <h3>Shotguns</h3>
+                    <div class="weapon-cards">
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/bucky.png" alt="Bucky">
+                            <h3>Bucky</h3>
+                            <p>Shotgun with primary and alternate fire modes.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 850</span>
+                                <span>Damage: 20/pellet</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/judge.png" alt="Judge">
+                            <h3>Judge</h3>
+                            <p>Automatic shotgun with high rate of fire.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 1850</span>
+                                <span>Damage: 13/pellet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rifles Category -->
+                <div class="weapon-category">
+                    <h3>Rifles</h3>
+                    <div class="weapon-cards">
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/bulldog.png" alt="Bulldog">
+                            <h3>Bulldog</h3>
+                            <p>Rifle with burst-fire alternative mode.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 2050</span>
+                                <span>Damage: 35 on body -116 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/guardian.png" alt="Guardian">
+                            <h3>Guardian</h3>
+                            <p>Semi-automatic rifle with high penetration.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 2250</span>
+                                <span>Damage: 65 on body -195 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/phantom.png" alt="Phantom">
+                            <h3>Phantom</h3>
+                            <p>Silenced automatic rifle with controlled recoil.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 2900</span>
+                                <span>Damage: 39 on body -156 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/vandal.png" alt="Vandal">
+                            <h3>Vandal</h3>
+                            <p>High-damage rifle with one-shot potential.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 2900</span>
+                                <span>Damage: 40 on body -160 on head</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sniper Rifles Category -->
+                <div class="weapon-category">
+                    <h3>Sniper Rifles</h3>
+                    <div class="weapon-cards">
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/marshal.png" alt="Marshal">
+                            <h3>Marshal</h3>
+                            <p>Light sniper rifle with high mobility.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 950</span>
+                                <span>Damage: 101 on body -202 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/outlaw.png" alt="Marshal">
+                            <h3>Outlaw</h3>
+                            <p>Moderately priced sniper rifle with with perfect accuracy when stationary in Alternate Fire mode.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 2400</span>
+                                <span>Damage: 140 on body -238 on head</span>
+                                </div>
+                            </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/operator.png" alt="Operator">
+                            <h3>Operator</h3>
+                            <p>High-powered sniper rifle with one-shot potential.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 4700</span>
+                                <span>Damage: 150 on body -255 on head</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Heavy Weapons Category -->
+                <div class="weapon-category">
+                    <h3>Heavy Weapons</h3>
+                    <div class="weapon-cards">
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/ares.png" alt="Ares">
+                            <h3>Ares</h3>
+                            <p>Light machine gun with large magazine.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 1600</span>
+                                <span>Damage: 30 on body -72 on head</span>
+                            </div>
+                        </div>
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/odin.png" alt="Odin">
+                            <h3>Odin</h3>
+                            <p>Heavy machine gun with wall penetration.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: 3200</span>
+                                <span>Damage: 38 on body -77 on head</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Melee Category -->
+                <div class="weapon-category">
+                    <h3>Melee</h3>
+                    <div class="weapon-cards">
+                        <div class="weapon-card">
+                            <img src="pictures/WeaponResources/melee.png" alt="Melee">
+                            <h3>Melee</h3>
+                            <p>Standard melee weapon available to all players.</p>
+                            <div class="weapon-stats">
+                                <span>Credits: Free</span>
+                                <span>Damage: 50 on body-75 on head</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!----------------------------- STRATEGY ------------------------------->
+            <section id="strategy">
+                <h2>Valorant Strategy</h2>
+                <div class="strategy-content">
+                    <div class="strategy-card">
+                        <h3>Team Coordination</h3>
+                        <p>Using voice comms helps teams stay in sync, share info, and adapt quickly to outplay opponents.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <h3>Ability Synergy</h3>
+                        <p>Coordinating agent abilities allows teams to create powerful combos, control key areas in the map, and disrupt enemy plans.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <h3>Map Awareness</h3>
+                        <p>Understanding map layouts and mastering rotations allow players to anticipate enemy movements, control key areas, and gain a strategic edge over opponents.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <h3>Proper Strafing</h3>
+                        <p>Learning to strafe and master "stop and shoot" techniques improves accuracy and evasion in gunfights.</p>
+                    </div>
+                    <div class="strategy-card">
+                        <h3>Agent Mastery</h3>
+                        <p>Mastering an agent’s abilities and playstyle lets players maximize their impact in matches.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!----------------------------- FOOTER ------------------------------->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-logos">
+                    <img src="pictures/riot_logo.png" alt="Riot Games Logo" class="footer-logo">
+                    <img src="pictures/valorant_logo.png" alt="Valorant Logo" class="footer-logo">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2024 Riot Games, Inc. Riot Games, VALORANT, and any associated logos are trademarks or service marks of Riot Games.</p>
+            <p>&copy; 2024 <a href="https://playvalorant.com" target="_blank" >playvalorant.com</a>. All rights reserved.</p>
+            <p>&copy; 2024 <a href="https://valorant.fandom.com" target="_blank" >valorant.fandom.com</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>                
+    </div>
+</body>
+</html>
